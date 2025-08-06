@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 30px 55px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.4);
+}
+
+h1{
+    padding-bottom: 30px;
+    color: white;
+    font-size: 35px;
+    text-shadow: 0px 4px 10px rgb(0, 0, 0, 0.4);
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#list::-webkit-scrollbar{
+    display: none;
+}
+
+#content form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input{
+    padding: 15px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.4);
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+input:focus{
+    outline: none;
+}
+
+#add{
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.4);
+}
+
+#add:hover{
+    background-color: rgb(127, 95, 255);
+}
+
+#add:active{
+    background-color: rgb(127, 95, 255);
+}
+
+@media (max-width: 500px) {
+    #container{
+        padding: 30px 35px;
+    }
+    h1{
+        text-align: center;
+        font-size: 25px;
+    }
+    input{
+        width: 100%;
+        padding: 10px 20px;
+    }
+    #add{
+        font-size: 15px;
+        padding: 8px 30px;
+    }
+}
+
+@media (min-width:499.99px) {
+    #container{
+        width: 70%;
+        max-width: 600px;
+    }    
+    #content{
+        width: 100%;
+    }
+
+    #input_Container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input{
+        width: 80%;
+        max-width: 400px;
+    }
+}
